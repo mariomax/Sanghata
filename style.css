@@ -1,0 +1,27 @@
+/*
+Theme Name: Twenty Nineteen Child
+Theme URI: https://en-gb.wordpress.org/themes/twentynineteen/
+Author: ChildThemeWP.com
+Author URI: https://childthemewp.com
+Description: My WordPress Twenty Nineteen child theme.
+Template: twentynineteen
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.0
+Text Domain: twentynineteen-child
+*/
+
+@font-face {
+  font-family: "NeutraDisplay-Draft";  
+  src: url(https://sanghata.pacifichermitage.org/wp-content/themes/twentynineteen-child/fonts/NeutraDisplay-Draft.otf);  
+  font-weight: normal;  
+}
+
+/* Base colors */
+.site-title {
+  color: #325758;
+}
+.entry-title {
+  color: #303E5C;
+  font-family: "NeutraDisplay-Draft";
+}
