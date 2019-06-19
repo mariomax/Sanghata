@@ -27,24 +27,59 @@ Text Domain: twentynineteen-child
   font-weight: normal;
 }
 
-/* Base colors */
-.site-title {
-  color: #325758;
-  font-family: "NeutraDisplay-Draft";
+html {
+  font-size: 20px;
+}
 
+/* Base colors & Fonts */
+.site-title {
+  color: #303E5C;
+  font-family: "NeutraDisplay-Draft";
 }
 
 a {
   color: #303E5C;
 }
 
-a:hover {
+a:visited,
+a:hover,
+a:active {
   color: #305271;
 }
 
 .entry-title {
   color: #303E5C;
   font-family: "NeutraDisplay-Draft";
+}
+
+.entry-content h3 {
+  color: #D3AC5E;
+  font-family: "NeutraDisplay-Draft";
+
+}
+
+button,
+input,
+select,
+optgroup,
+textarea,
+.menu-item-link-return {
+  font-family: Lato, sans-serif;
+}
+
+blockquote {
+  border-left: 2px solid #305271;
+}
+
+/* Navigation */
+a {
+  -webkit-transition: color 110ms ease-in-out;
+  transition: color 110ms ease-in-out;
+  color: #303E5C;
+}
+
+.main-navigation .main-menu>li {
+  color: #303E5C;
 }
 
 .main-navigation .main-menu>li>a {
@@ -56,47 +91,199 @@ a:hover {
   color: #305271;
 }
 
-html {
-  font-size: 18px;
+.main-navigation .main-menu>li>a:hover,
+.main-navigation .main-menu>li>a:hover+svg {
+  color: #305271;
 }
 
-.board-member,
-.board-position {
-  color: #303E5C;
+.main-navigation .sub-menu {
+  background-color: #305271;
+}
+
+.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within]>.sub-menu .sub-menu>li>a::before {
+  font-family: "NeutraDisplay-Draft";
+}
+
+.main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within>.sub-menu .sub-menu>li>a::before {
+  font-family: "NeutraDisplay-Draft";
+}
+
+.main-navigation .main-menu .menu-item-has-children.off-canvas .sub-menu>li>a,
+.main-navigation .main-menu .menu-item-has-children.off-canvas .sub-menu>li>.menu-item-link-return {
+  font-family: "NeutraDisplay-Draft";
+}
+
+.main-navigation .sub-menu>li {
+  font-family: "NeutraDisplay-Draft";
+}
+
+/* Site branding & Hero */
+.site-branding-container {
+  padding: 0 1rem;
+}
+
+/* Forms */
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: #305271;
+  font-family: Lato, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  border-color: #305271;
+}
+
+/*  Widgets */
+.widget_archive ul ul>li>a::before,
+.widget_categories ul ul>li>a::before,
+.widget_meta ul ul>li>a::before,
+.widget_nav_menu ul ul>li>a::before,
+.widget_pages ul ul>li>a::before,
+.widget_recent_comments ul ul>li>a::before,
+.widget_recent_entries ul ul>li>a::before,
+.widget_rss ul ul>li>a::before {
+  font-family: Lato, sans-serif;
+
+}
+
+
+/* Home & About */
+.board-img {
+  margin-bottom: 1rem;
+}
+
+.page-title {
   font-family: "NeutraDisplay-Draft";
 }
 
 p {
   color: #303E5C;
-  font-family: Lato;
+  font-family: Lato, sans-serif;
   font-weight: normal;
 }
 
-p.board-description {
+.cta-box-left {
+  flex-basis: 70%;
+}
+
+a.wp-block-button__link {
+  font-family: Lato, sans-serif;
+}
+
+.cta-box-right {
+  flex-basis: 30%;
+}
+
+h3.board-member {
+  color: #303E5C;
+  font-family: "NeutraDisplay-Draft";
+}
+
+.board-position {
+  color: #D3AC5E;
+  font-family: "NeutraDisplay-Draft";
+}
+
+.board-description {
   font-size: .9rem;
 }
 
-/* .site-header {
-  padding: 0;
-} */
 .site-header {
-  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero-fade.jpg);
-  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero-fade.jpg);
+  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero-gradient.jpg);
   background-position: center center;
   background-size: cover;
   padding: 1rem 0 70vh;
   margin: 0;
 }
-.site-title:not(:empty) + .site-description:not(:empty):before {
+
+.entry .entry-title:before {
+  display: none;
+}
+
+/* Remove h1 page title
+.home .entry-header {
+  display: none;
+} */
+.site-title:not(:empty)+.site-description:not(:empty):before {
   content: "\007C";
 }
 
-/* .main-navigation .main-menu {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  flex-direction: row;
-  justify-content: space-between;
-} */
 
-@media (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+
+  .main-navigation .sub-menu>li>a:hover,
+  .main-navigation .sub-menu>li>a:focus,
+  .main-navigation .sub-menu>li>.menu-item-link-return:hover,
+  .main-navigation .sub-menu>li>.menu-item-link-return:focus {
+    background: #305271;
+  }
+
+  .main-navigation .sub-menu>li>a:hover:after,
+  .main-navigation .sub-menu>li>a:focus:after,
+  .main-navigation .sub-menu>li>.menu-item-link-return:hover:after,
+  .main-navigation .sub-menu>li>.menu-item-link-return:focus:after {
+    background: #305271;
+  }
+
+  .entry .entry-content p {
+    max-width: 100%
+  }
+
+  .board-description {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .member-block {
+    max-width: 100%;
+  }
+
+  .member-picture {
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+  }
+
+  .member-info {
+    -ms-flex-preferred-size: 65%;
+    flex-basis: 65%;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .entry .entry-content>* {
+    max-width: 100%;
+  }
+
+  .member-block {
+    max-width: 100%;
+  }
+
+  .member-picture {
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+  }
+
+  .member-info {
+    -ms-flex-preferred-size: 65%;
+    flex-basis: 65%;
+  }
+}
