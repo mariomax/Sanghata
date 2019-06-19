@@ -11,17 +11,88 @@ Version: 1.0.0
 Text Domain: twentynineteen-child
 */
 
+/* Color palette */
+/*
+  White Salmon Blue: #303E5C;
+  Hover: #305271;
+  Pine Needle: #92ACA3;
+  Forest Fog: #DEE6E3;
+  Gold: #D3AC5E;
+  Saffron: #C6842F;
+*/
+
 @font-face {
-  font-family: "NeutraDisplay-Draft";  
-  src: url(https://sanghata.pacifichermitage.org/wp-content/themes/twentynineteen-child/fonts/NeutraDisplay-Draft.otf);  
-  font-weight: normal;  
+  font-family: "NeutraDisplay-Draft";
+  src: url(https://sanghata.pacifichermitage.org/wp-content/themes/twentynineteen-child/fonts/NeutraDisplay-Draft.otf);
+  font-weight: normal;
 }
 
 /* Base colors */
 .site-title {
   color: #325758;
 }
+
+a {
+  color: #303E5C;
+}
+
+a:hover {
+  color: #305271;
+}
+
 .entry-title {
   color: #303E5C;
   font-family: "NeutraDisplay-Draft";
 }
+
+.main-navigation .main-menu>li>a {
+  color: #303E5C;
+  font-family: "NeutraDisplay-Draft";
+}
+
+.main-navigation .main-menu>li>a:hover {
+  color: #305271;
+}
+
+html {
+  font-size: 18px;
+}
+
+.board-member,
+.board-position {
+  color: #303E5C;
+  font-family: "NeutraDisplay-Draft";
+}
+
+p {
+  color: #303E5C;
+  font-family: Lato;
+  font-weight: normal;
+}
+
+p.board-description {
+  font-size: .9rem;
+}
+
+/* .site-header {
+  padding: 0;
+} */
+.site-header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 250, 250, 0.5)), to(rgba(250, 250, 250, 0.5))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero.jpg);
+  background-image: linear-gradient(rgba(250, 250, 250, 0.5), rgba(250, 250, 250, 0.5)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero.jpg);
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.5;
+  padding: 1rem 0 50vh;
+  margin: 0;
+}
+.main-navigation .main-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {}
+@media (min-width: 1024px) {}
