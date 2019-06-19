@@ -30,6 +30,8 @@ Text Domain: twentynineteen-child
 /* Base colors */
 .site-title {
   color: #325758;
+  font-family: "NeutraDisplay-Draft";
+
 }
 
 a {
@@ -78,21 +80,23 @@ p.board-description {
   padding: 0;
 } */
 .site-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 250, 250, 0.5)), to(rgba(250, 250, 250, 0.5))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero.jpg);
-  background-image: linear-gradient(rgba(250, 250, 250, 0.5), rgba(250, 250, 250, 0.5)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero.jpg);
+  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero-fade.jpg);
+  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero-fade.jpg);
   background-position: center center;
   background-size: cover;
-  opacity: 0.5;
-  padding: 1rem 0 50vh;
+  padding: 1rem 0 70vh;
   margin: 0;
 }
-.main-navigation .main-menu {
+.site-title:not(:empty) + .site-description:not(:empty):before {
+  content: "\007C";
+}
+
+/* .main-navigation .main-menu {
   display: flex;
   margin: 0;
   padding: 0;
   flex-direction: row;
   justify-content: space-between;
-}
+} */
 
 @media (min-width: 768px) {}
-@media (min-width: 1024px) {}
