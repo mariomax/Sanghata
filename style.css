@@ -19,6 +19,7 @@ Text Domain: twentynineteen-child
   Forest Fog: #DEE6E3;
   Gold: #D3AC5E;
   Saffron: #C6842F;
+  Seed Black: #33363C;
 */
 
 @font-face {
@@ -55,7 +56,6 @@ a:active {
 .entry-content h3 {
   color: #D3AC5E;
   font-family: "NeutraDisplay-Draft";
-
 }
 
 button,
@@ -69,6 +69,35 @@ textarea,
 
 blockquote {
   border-left: 2px solid #305271;
+}
+
+/*  Header */
+.site-header {
+  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-mobile-hero-01.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 1rem 0 40vh;
+  margin: 0;
+}
+
+.site-title {
+  font-size: 2rem;
+}
+
+.site-description {
+  color: #D3AC5E;
+  display: block;
+  font-weight: 600;
+}
+
+.site-title:not(:empty)+.site-description:not(:empty):before {
+  content: "";
+  margin: 0;
+}
+
+.site-title:not(:empty)+.site-description:not(:empty):before {
+  content: "" !important;
 }
 
 /* Navigation */
@@ -164,14 +193,18 @@ textarea:focus {
 
 }
 
+/* Pages */
 
-/* Home & About */
-.board-img {
-  margin-bottom: 1rem;
+.entry .entry-title:before {
+  display: none;
 }
 
 .page-title {
   font-family: "NeutraDisplay-Draft";
+}
+
+.entry .entry-content p {
+  margin: 16px 0 32px;
 }
 
 p {
@@ -180,16 +213,29 @@ p {
   font-weight: normal;
 }
 
-.cta-box-left {
-  flex-basis: 70%;
-}
+/* Home */
 
-a.wp-block-button__link {
-  font-family: Lato, sans-serif;
+.cta-box-left {
+  -ms-flex-preferred-size: 80%;
+  flex-basis: 80%;
 }
 
 .cta-box-right {
-  flex-basis: 30%;
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+}
+
+.entry .entry-content .wp-block-button .wp-block-button__link {
+  font-family: Lato, sans-serif;
+}
+
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
+  background-color: #305271;
+}
+
+/* About */
+.board-img {
+  margin-bottom: 1rem;
 }
 
 h3.board-member {
@@ -206,16 +252,12 @@ h3.board-member {
   font-size: .9rem;
 }
 
-.site-header {
-  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero-gradient.jpg);
-  background-position: center center;
-  background-size: cover;
-  padding: 1rem 0 70vh;
-  margin: 0;
-}
+/* Finances */
 
-.entry .entry-title:before {
-  display: none;
+.entry .entry-content h4.info-heading {
+  color: #303E5C;
+  font-family: "NeutraDisplay-Draft";
+  margin: 32px 0 8px;
 }
 
 /* Remove h1 page title
@@ -224,6 +266,57 @@ h3.board-member {
 } */
 .site-title:not(:empty)+.site-description:not(:empty):before {
   content: "\007C";
+}
+
+/* Footer */
+
+footer {
+  background-color: #303E5C; 
+}
+
+.widget-title:before {
+  display: none;
+}
+
+h2.widget-title {
+  color: #D3AC5E;
+  font-family: "NeutraDisplay-Draft";
+  font-size: 1.25rem;
+}
+
+.footer-links,
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer-links a,
+.contact-info a,
+.contact-info p,
+.widget_nav_menu ul li a {
+  /* color: #303E5C; */
+  color: #fff;
+  font-family: Lato, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.footer-links a:hover,
+.contact-info a:hover,
+.widget_nav_menu ul li a:hover {
+  /* color: #305271; */
+  color: #DEE6E3;
+  text-decoration: underline;
 }
 
 
@@ -243,8 +336,29 @@ h3.board-member {
     background: #305271;
   }
 
-  .entry .entry-content p {
+  .site-header {
+    background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero-gradient.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding: 1rem 0 70vh;
+    margin: 0;
+  }
+
+  .site-title {
+    font-size: 3rem;
+  }
+
+  .site-branding {
+    margin: 0 calc(10% + 40px);
+  }
+
+  .entry .entry-content p,
+  .entry .entry-content .home-cta {
     max-width: 100%
+  }
+
+  h3.callout {
+    font-size: 1.3rem;
   }
 
   .board-description {
