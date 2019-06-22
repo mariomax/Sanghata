@@ -13,14 +13,24 @@ Text Domain: twentynineteen-child
 
 /* Color palette */
 /*
-  White Salmon Blue: #303E5C;
+  White Salmon Blue: --link;
   Hover: #305271;
   Pine Needle: #92ACA3;
   Forest Fog: #DEE6E3;
   Gold: #D3AC5E;
   Saffron: #C6842F;
   Seed Black: #33363C;
+  Cloud: #F1F2F2;
 */
+
+:root {
+  --link: #303E5C;
+  --hover: #305271;
+  --saffron: #C6842F;
+  --pine: #92ACA3;
+  --fog: #DEE6E3;
+
+}
 
 @font-face {
   font-family: "NeutraDisplay-Draft";
@@ -34,28 +44,37 @@ html {
 
 /* Base colors & Fonts */
 .site-title {
-  color: #303E5C;
+  color: var(--link);
   font-family: "NeutraDisplay-Draft";
 }
 
 a {
-  color: #303E5C;
+  color: var(--link);
 }
 
 a:visited,
 a:hover,
 a:active {
-  color: #305271;
+  color: var(--hover);
+}
+
+.entry .entry-content a {
+  text-decoration: none;
+}
+
+.entry .entry-content a:hover {
+  text-decoration: underline;
 }
 
 .entry-title {
-  color: #303E5C;
+  color: var(--link);
   font-family: "NeutraDisplay-Draft";
 }
 
 .entry-content h3 {
-  color: #D3AC5E;
+  color: var(--saffron);
   font-family: "NeutraDisplay-Draft";
+  font-size: 1.1rem;
 }
 
 button,
@@ -68,15 +87,17 @@ textarea,
 }
 
 blockquote {
-  border-left: 2px solid #305271;
+  border-left: 2px solid var(--hover);
 }
 
 /*  Header */
+
 .site-header {
-  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-mobile-hero-01.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-mobile-hero-01.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-mobile-hero-01.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding: 1rem 0 40vh;
   margin: 0;
 }
@@ -86,8 +107,9 @@ blockquote {
 }
 
 .site-description {
-  color: #D3AC5E;
+  color: var(--saffron);
   display: block;
+  font-family: Lato, sans-serif;
   font-weight: 600;
 }
 
@@ -104,29 +126,30 @@ blockquote {
 a {
   -webkit-transition: color 110ms ease-in-out;
   transition: color 110ms ease-in-out;
-  color: #303E5C;
+  color: var(--link);
 }
 
 .main-navigation .main-menu>li {
-  color: #303E5C;
+  color: var(--link);
 }
 
 .main-navigation .main-menu>li>a {
-  color: #303E5C;
+  color: var(--link);
   font-family: "NeutraDisplay-Draft";
 }
 
 .main-navigation .main-menu>li>a:hover {
-  color: #305271;
+  border-bottom: solid 3px var(--hover);
+  padding-bottom: 3px;
 }
 
 .main-navigation .main-menu>li>a:hover,
 .main-navigation .main-menu>li>a:hover+svg {
-  color: #305271;
+  color: var(--hover);
 }
 
 .main-navigation .sub-menu {
-  background-color: #305271;
+  background-color: var(--hover);
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within]>.sub-menu .sub-menu>li>a::before {
@@ -157,7 +180,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background: #305271;
+  background: var(--hover);
   font-family: Lato, sans-serif;
 }
 
@@ -177,7 +200,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  border-color: #305271;
+  border-color: var(--hover);
 }
 
 /*  Widgets */
@@ -208,7 +231,7 @@ textarea:focus {
 }
 
 p {
-  color: #303E5C;
+  color: var(--link);
   font-family: Lato, sans-serif;
   font-weight: normal;
 }
@@ -216,13 +239,17 @@ p {
 /* Home */
 
 .cta-box-left {
-  -ms-flex-preferred-size: 80%;
-  flex-basis: 80%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 
 .cta-box-right {
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+h3.callout {
+  font-size: 1rem;
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link {
@@ -230,21 +257,22 @@ p {
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
-  background-color: #305271;
+  background-color: var(--hover);
 }
 
 /* About */
-.board-img {
-  margin-bottom: 1rem;
+
+.entry .entry-content .board-image {
+  margin: 0;
 }
 
 h3.board-member {
-  color: #303E5C;
+  color: var(--link);
   font-family: "NeutraDisplay-Draft";
 }
 
 .board-position {
-  color: #D3AC5E;
+  color: var(--saffron);
   font-family: "NeutraDisplay-Draft";
 }
 
@@ -255,7 +283,7 @@ h3.board-member {
 /* Finances */
 
 .entry .entry-content h4.info-heading {
-  color: #303E5C;
+  color: var(--link);
   font-family: "NeutraDisplay-Draft";
   margin: 32px 0 8px;
 }
@@ -271,7 +299,14 @@ h3.board-member {
 /* Footer */
 
 footer {
-  background-color: #303E5C; 
+  /* background-color: var(--link);  */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 54, 60, 0.8)), to(rgba(51, 54, 60, 0.8))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-footer-pavers.jpg);
+  background-image: linear-gradient(rgba(51, 54, 60, 0.8), rgba(51, 54, 60, 0.8)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-footer-pavers.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding: 1rem 0 40vh; */
+  margin: 0;
 }
 
 .widget-title:before {
@@ -279,9 +314,10 @@ footer {
 }
 
 h2.widget-title {
-  color: #D3AC5E;
+  color: var(--fog);
   font-family: "NeutraDisplay-Draft";
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 .footer-links,
@@ -299,7 +335,7 @@ h2.widget-title {
 .contact-info a,
 .contact-info p,
 .widget_nav_menu ul li a {
-  /* color: #303E5C; */
+  /* color: var(--link); */
   color: #fff;
   font-family: Lato, sans-serif;
   font-size: 1.125rem;
@@ -314,11 +350,34 @@ h2.widget-title {
 .footer-links a:hover,
 .contact-info a:hover,
 .widget_nav_menu ul li a:hover {
-  /* color: #305271; */
+  /* color: var(--hover); */
   color: #DEE6E3;
   text-decoration: underline;
 }
 
+#menu-item-115,
+#menu-item-116 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .member-picture {
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+
+  .member-info {
+    -ms-flex-preferred-size: calc(65% - 32px);
+    flex-basis: calc(65% - 32px);
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -326,21 +385,23 @@ h2.widget-title {
   .main-navigation .sub-menu>li>a:focus,
   .main-navigation .sub-menu>li>.menu-item-link-return:hover,
   .main-navigation .sub-menu>li>.menu-item-link-return:focus {
-    background: #305271;
+    background: var(--hover);
   }
 
   .main-navigation .sub-menu>li>a:hover:after,
   .main-navigation .sub-menu>li>a:focus:after,
   .main-navigation .sub-menu>li>.menu-item-link-return:hover:after,
   .main-navigation .sub-menu>li>.menu-item-link-return:focus:after {
-    background: #305271;
+    background: var(--hover);
   }
 
   .site-header {
-    background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero-gradient.jpg);
+    display: block;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero.jpg);
     background-position: center center;
     background-size: cover;
-    padding: 1rem 0 70vh;
+    padding: 1rem 0 60vh;
     margin: 0;
   }
 
@@ -349,7 +410,19 @@ h2.widget-title {
   }
 
   .site-branding {
-    margin: 0 calc(10% + 40px);
+    margin: 0 0 0 calc(10% + 1rem);
+  }
+
+  .entry .entry-content {
+    padding: 0 1rem;
+  }
+
+  .entry .entry-header {
+    margin: calc(3 * 1rem) calc(10% + 1rem) 1rem;
+  }
+
+  .entry .entry-content h3 {
+    font-size: 1.25rem;
   }
 
   .entry .entry-content p,
@@ -357,19 +430,64 @@ h2.widget-title {
     max-width: 100%
   }
 
+  .cta-box-left {
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
+  }
+
+  .cta-box-right {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+  }
+
   h3.callout {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+  }
+
+  .entry .entry-content .board-image {
+    float: left;
+    margin-right: 1rem;
+    max-width: 50%;
+  }
+
+  .entry .entry-content .member-block {
+    max-width: 100%;
   }
 
   .board-description {
     font-size: 1rem;
   }
+
+  /* Footer */
+  #colophon .widget-area {
+    margin: calc(2 * 1rem) calc(10% + 1rem);
+  }
+
+  #colophon .widget-column {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  #colophon .widget-column .widget {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  h2.widget-title {
+    font-size: 1rem;
+  }
+
+  .footer-links a,
+  .contact-info a,
+  .contact-info p,
+  .widget_nav_menu ul li a {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  .member-block {
-    max-width: 100%;
-  }
 
   .member-picture {
     -ms-flex-preferred-size: 35%;
