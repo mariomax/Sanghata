@@ -98,8 +98,12 @@ blockquote {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1rem 0 40vh;
+  padding: 1rem 0 45vh;
   margin: 0;
+}
+
+.entry .entry-header {
+  margin: calc(2 * 1rem) 1rem 1rem;
 }
 
 .site-title {
@@ -109,7 +113,7 @@ blockquote {
 .site-description {
   color: var(--saffron);
   display: block;
-  font-family: Lato, sans-serif;
+  font-family: "NeutraDisplay-Draft";
   font-weight: 600;
 }
 
@@ -230,6 +234,10 @@ textarea:focus {
   margin: 16px 0 32px;
 }
 
+.entry .entry-content h3 {
+  max-width: 100%;
+}
+
 p {
   color: var(--link);
   font-family: Lato, sans-serif;
@@ -257,7 +265,11 @@ h3.callout {
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
-  background-color: var(--hover);
+  background-color: var(--link);
+}
+
+.entry .entry-content .wp-block-button .wp-block-button__link:hover {
+  background: var(--hover);
 }
 
 /* About */
@@ -401,8 +413,12 @@ h2.widget-title {
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-hero.jpg);
     background-position: center center;
     background-size: cover;
-    padding: 1rem 0 60vh;
+    padding: 1rem 0 50vh;
     margin: 0;
+  }
+
+  .entry .entry-header {
+    margin: calc(3 * 1rem) 1rem 1rem;
   }
 
   .site-title {
@@ -489,6 +505,14 @@ h2.widget-title {
 
 @media only screen and (min-width: 1024px) {
 
+  .site-header {
+    padding: 1rem 0 55vh;
+  }
+
+  .site-description {
+    font-size: 1.33rem;
+  }
+  
   .member-picture {
     -ms-flex-preferred-size: 35%;
     flex-basis: 35%;
@@ -503,6 +527,10 @@ h2.widget-title {
 @media only screen and (min-width: 1168px) {
   .entry .entry-content>* {
     max-width: 100%;
+  }
+
+  .site-header {
+    padding: 1rem 0 45vh;
   }
 
   .member-block {
