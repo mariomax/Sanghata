@@ -25,11 +25,14 @@ Text Domain: twentynineteen-child
 
 :root {
   --link: #303E5C;
-  --hover: #305271;
+  /* --hover: #305271; */
+  --hover: #C6842F;
   --saffron: #C6842F;
+  --gold: #D3AC5E;
   --pine: #92ACA3;
   --fog: #DEE6E3;
-
+  --cloud: #F1F2F2;
+  --seed: #33363C;
 }
 
 @font-face {
@@ -274,11 +277,54 @@ h3.callout {
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
-  background-color: var(--link);
+  background-color: var(--saffron);
+  box-shadow: 7px 7px 5px var(--fog);
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:hover {
-  background: var(--hover);
+  background: var(--gold);
+}
+
+/* Sample donation buttons - remove what won't be used. TODO */
+
+.entry .entry-content .version2 {
+  background-color: var(--saffron);
+  padding: 1rem;
+}
+
+.cta-box-left {
+  display: flex;
+}
+
+h3.calloutV2,
+h3.calloutV3 {
+  color: #fff;
+  align-self: center;
+  text-align: center;
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+}
+
+h3.calloutV3 {
+  color: var(--seed);
+}
+
+.cta-box-rightV2,
+.cta-box-rightV3 {
+  display: flex;
+  align-items: center;
+}
+
+.entry .entry-content .wp-block-button.cta-donateV2 .wp-block-button__link:hover {
+  background-color: var(--cloud) !important;
+}
+
+.entry .entry-content .version3 {
+  background-image: linear-gradient(rgba(215, 227, 230, 0.8), rgba(215, 227, 230, 0.8)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/buddha-alms-bowl.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 1.5rem;
 }
 
 /* About */
