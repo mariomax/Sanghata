@@ -13,8 +13,8 @@ Text Domain: twentynineteen-child
 
 /* Color palette */
 /*
-  White Salmon Blue: --link;
-  Hover: #305271;
+  White Salmon Blue: #303E5C; (--link)
+  Link Hover: #305271;
   Pine Needle: #92ACA3;
   Forest Fog: #DEE6E3;
   Gold: #D3AC5E;
@@ -25,7 +25,7 @@ Text Domain: twentynineteen-child
 
 :root {
   --link: #303E5C;
-  /* --hover: #305271; */
+  /* blue --hover: #305271; */
   --hover: #C6842F;
   --saffron: #C6842F;
   --gold: #D3AC5E;
@@ -96,7 +96,7 @@ textarea,
 }
 
 blockquote {
-  border-left: 2px solid var(--hover);
+  border-left: 2px solid var(--link);
 }
 
 /*  Header */
@@ -165,7 +165,7 @@ a {
 }
 
 .main-navigation .sub-menu {
-  background-color: var(--hover);
+  background-color: var(--link);
 }
 
 .main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within]>.sub-menu .sub-menu>li>a::before {
@@ -361,6 +361,13 @@ h3.board-member {
 } */
 .site-title:not(:empty)+.site-description:not(:empty):before {
   content: "\007C";
+}
+
+/* Donorbox customization */
+/* The majority of the customization (fonts, colors, margin/padding) happens at https://donorbox.org  */
+
+.wp-block-code {
+  border: none;
 }
 
 /* Footer */
