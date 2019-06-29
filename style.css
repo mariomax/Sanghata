@@ -45,9 +45,22 @@ html {
   font-size: 20px;
 }
 
+body * {
+  font-family: Lato, sans-serif;
+}
+
 /* Base colors & Fonts */
-.site-title {
-  color: var(--link);
+.site-title a {
+  color: var(--link) !important;
+  font-size: 2rem;
+}
+
+.site-title a:hover {
+  color: var(--seed);
+}
+
+.site-title a:link {
+  color: var(--link) !important;
   font-family: "NeutraDisplay-Draft";
 }
 
@@ -70,14 +83,6 @@ a:active {
   text-decoration: none;
 }
 
-.site-title a:link {
-  color: var(--link);
-}
-
-.site-title a:hover {
-  color: var(--hover);
-}
-
 .entry .entry-content a:hover {
   text-decoration: underline;
 }
@@ -89,17 +94,7 @@ a:active {
 
 .entry-content h3 {
   color: var(--saffron);
-  font-family: Lato, sans-serif;
   font-size: 1.1rem;
-}
-
-button,
-input,
-select,
-optgroup,
-textarea,
-.menu-item-link-return {
-  font-family: Lato, sans-serif;
 }
 
 blockquote {
@@ -120,10 +115,6 @@ blockquote {
 
 .entry .entry-header {
   margin: calc(2 * 1rem) 1rem 1rem;
-}
-
-.site-title {
-  font-size: 2rem;
 }
 
 .site-description {
@@ -159,7 +150,6 @@ a {
 
 .main-navigation .main-menu>li>a {
   color: var(--link);
-  font-family: Lato, sans-serif;
 }
 
 .main-navigation .main-menu>li>a:hover {
@@ -176,23 +166,6 @@ a {
   background-color: var(--link);
 }
 
-.main-navigation .main-menu .menu-item-has-children:not(.off-canvas)[focus-within]>.sub-menu .sub-menu>li>a::before {
-  font-family: Lato, sans-serif;
-}
-
-.main-navigation .main-menu .menu-item-has-children:not(.off-canvas):focus-within>.sub-menu .sub-menu>li>a::before {
-  font-family: Lato, sans-serif;
-}
-
-.main-navigation .main-menu .menu-item-has-children.off-canvas .sub-menu>li>a,
-.main-navigation .main-menu .menu-item-has-children.off-canvas .sub-menu>li>.menu-item-link-return {
-  font-family: Lato, sans-serif;
-}
-
-.main-navigation .sub-menu>li {
-  font-family: Lato, sans-serif;
-}
-
 /* Site branding & Hero */
 .site-branding-container {
   padding: 0 1rem;
@@ -205,7 +178,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background: var(--hover);
-  font-family: Lato, sans-serif;
 }
 
 input[type="text"]:focus,
@@ -227,27 +199,10 @@ textarea:focus {
   border-color: var(--hover);
 }
 
-/*  Widgets */
-.widget_archive ul ul>li>a::before,
-.widget_categories ul ul>li>a::before,
-.widget_meta ul ul>li>a::before,
-.widget_nav_menu ul ul>li>a::before,
-.widget_pages ul ul>li>a::before,
-.widget_recent_comments ul ul>li>a::before,
-.widget_recent_entries ul ul>li>a::before,
-.widget_rss ul ul>li>a::before {
-  font-family: Lato, sans-serif;
-
-}
-
 /* Pages */
 
 .entry .entry-title:before {
   display: none;
-}
-
-.page-title {
-  font-family: Lato, sans-serif;
 }
 
 .entry .entry-content p {
@@ -260,7 +215,6 @@ textarea:focus {
 
 p {
   color: var(--link);
-  font-family: Lato, sans-serif;
   font-weight: normal;
 }
 
@@ -282,7 +236,6 @@ h3.callout {
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link {
-  font-family: "Lato", sans-serif;
   font-size: 1.125rem;
   font-weight: 600;
 }
@@ -290,7 +243,7 @@ h3.callout {
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
   background-color: var(--saffron);
   -webkit-box-shadow: 7px 7px 5px var(--fog);
-          box-shadow: 7px 7px 5px var(--fog);
+  box-shadow: 7px 7px 5px var(--fog);
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:hover {
@@ -308,19 +261,16 @@ h3.callout {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 h4.home-news {
   color: var(--link);
-  font-family: Lato, sans-serif;
-
 }
 
 .entry .entry-content .wp-block-latest-posts li {
   color: var(--seed);
-  font-family: Lato, sans-serif;
 }
 
 .entry .entry-content .wp-block-latest-posts li a:hover {
@@ -329,7 +279,6 @@ h4.home-news {
 
 .wp-block-latest-posts__post-date {
   color: var(--link);
-  font-family: Lato, sans-serif;
 }
 
 /* About */
@@ -345,13 +294,11 @@ h4.home-news {
 
 h3.board-member {
   color: var(--link);
-  font-family: Lato, sans-serif;
   margin: 0;
 }
 
 .board-position {
   color: var(--saffron);
-  font-family: Lato, sans-serif;
   margin: .5rem 0 1rem;
 }
 
@@ -363,14 +310,9 @@ h3.board-member {
 
 .entry .entry-content h4.info-heading {
   color: var(--link);
-  font-family: Lato, sans-serif;
   margin: 32px 0 8px;
 }
 
-/* Remove h1 page title
-.home .entry-header {
-  display: none;
-} */
 .site-title:not(:empty)+.site-description:not(:empty):before {
   content: "\007C";
 }
@@ -383,10 +325,26 @@ h3.board-member {
   padding: 0;
 }
 
+/* Posts */
+h1.entry-title {
+  font-size: 1.75rem;
+}
+
+.entry .entry-meta,
+.entry .entry-footer,
+.post-navigation .nav-links a .meta-nav {
+  color: var(--seed);
+}
+
+.entry .entry-meta a:hover,
+.entry .entry-footer a:hover,
+.post-navigation .nav-links a:hover {
+  color: var(--hover);
+}
 
 /* Footer */
 
-footer {
+footer.site-footer {
   /* background-color: var(--link);  */
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 54, 60, 0.8)), to(rgba(51, 54, 60, 0.8))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-footer-pavers.jpg);
   background-image: linear-gradient(rgba(51, 54, 60, 0.8), rgba(51, 54, 60, 0.8)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-footer-pavers.jpg);
@@ -403,7 +361,6 @@ footer {
 
 h2.widget-title {
   color: var(--saffron);
-  font-family: Lato, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1rem 0 .5rem;
@@ -426,16 +383,10 @@ h2.widget-title {
 .widget_nav_menu ul li a {
   /* color: var(--link); */
   color: #fff;
-  font-family: Lato, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.75;
 }
-
-/* 
-p.tel-hours {
-  display: inline-block;
-} */
 
 .contact-info p {
   margin: 0;
