@@ -1,0 +1,19 @@
+body * {
+font-family: Lato, sans-serif;
+}
+.donation-widget.tabs {
+max-width: 100%;
+}
+a {
+color: #303E5C;
+}
+a:hover {
+color: #305271;
+text-decoration: underline;
+}
+.donation-widget.tabs .tabs-footer .dw-btn.basic-color-background {
+box-shadow: 7px 7px 5px #DEE6E3;
+padding: 0 3rem;
+width: fit-content;
+text-transform: uppercase;
+}
