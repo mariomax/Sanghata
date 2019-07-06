@@ -50,6 +50,7 @@ body * {
 }
 
 /* Base colors & Fonts */
+
 .site-title a {
   color: var(--link) !important;
   font-size: 2rem;
@@ -134,6 +135,7 @@ blockquote {
 }
 
 /* Navigation */
+
 a {
   -webkit-transition: color 110ms ease-in-out;
   transition: color 110ms ease-in-out;
@@ -167,11 +169,13 @@ a {
 }
 
 /* Site branding & Hero */
+
 .site-branding-container {
   padding: 0 1rem;
 }
 
 /* Forms */
+
 .button,
 button,
 input[type="button"],
@@ -304,6 +308,19 @@ h3.board-member {
 
 .board-description {
   font-size: .9rem;
+}
+
+/* Donate */
+
+.foundation {
+  color: var(--saffron);
+  font-family: "NeutraDisplay-Draft";
+  font-weight:600;
+}
+
+.entry .entry-content p.check-address,
+.entry .entry-content p.bank-address {
+  margin: 1rem 0 3rem;
 }
 
 /* Finances */
