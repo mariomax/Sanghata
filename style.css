@@ -323,6 +323,10 @@ h3.board-member {
   margin: 1rem 0 3rem;
 }
 
+.donor-callout {
+  color: var(--saffron);
+}
+
 /* Finances */
 
 .entry .entry-content h4.info-heading {
