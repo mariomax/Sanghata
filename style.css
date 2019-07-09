@@ -25,7 +25,7 @@ Text Domain: twentynineteen-child
 
 :root {
   --link: #303E5C;
-  /* blue --hover: #305271; */
+  --blue: #305271;
   --hover: #C6842F;
   --saffron: #C6842F;
   --gold: #D3AC5E;
@@ -74,7 +74,10 @@ a {
   font-weight: 700;
 }
 
-a:visited,
+a:visited {
+  color: var(--blue);
+}
+
 a:hover,
 a:active {
   color: var(--hover);
@@ -122,6 +125,7 @@ blockquote {
   color: var(--saffron);
   display: block;
   font-family: "NeutraDisplay-Draft";
+  font-size: .85rem;
   font-weight: 600;
 }
 
@@ -312,10 +316,50 @@ h3.board-member {
 
 /* Donate */
 
+.donor-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.entry .entry-content .donate-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: .75rem;
+}
+
+#checks,
+#cash,
+#wire-trans,
+#amazonSmile {
+  padding-top: 1rem;
+}
+
+img.donate-icon {
+  max-width: 1.2rem;
+  margin-right: .75rem;
+}
+
 .foundation {
   color: var(--saffron);
   font-family: "NeutraDisplay-Draft";
-  font-weight:600;
+  font-weight: 600;
 }
 
 .entry .entry-content p.check-address,
@@ -325,6 +369,28 @@ h3.board-member {
 
 .donor-callout {
   color: var(--saffron);
+}
+
+.donate-spacer {
+  height: 1rem !important;
+}
+
+.entry .entry-content .cash-p {
+  margin: 1rem 0 3rem;
+}
+
+.entry .entry-content .amazon-icon {
+  margin: 0;
+  max-width: 10rem;
+}
+
+/* Donorbox customization */
+/* The customization of fonts, colors, margin/padding is at https://donorbox.org  */
+/* See content in donorbox.css */
+
+.wp-block-code {
+  border: none;
+  padding: 0;
 }
 
 /* Finances */
@@ -338,17 +404,14 @@ h3.board-member {
   content: "\007C";
 }
 
-/* Donorbox customization */
-/* The majority of the customization (fonts, colors, margin/padding) happens at https://donorbox.org  */
-
-.wp-block-code {
-  border: none;
-  padding: 0;
-}
-
 /* Posts */
 h1.entry-title {
   font-size: 1.75rem;
+}
+
+h2.entry-title a {
+  font-family: "NeutraDisplay-Draft";
+  font-size: 1.25rem;
 }
 
 .entry .entry-meta,
@@ -367,8 +430,8 @@ h1.entry-title {
 
 footer.site-footer {
   /* background-color: var(--link);  */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 54, 60, 0.8)), to(rgba(51, 54, 60, 0.8))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-footer-pavers.jpg);
-  background-image: linear-gradient(rgba(51, 54, 60, 0.8), rgba(51, 54, 60, 0.8)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/06/sanghata-footer-pavers.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/sanghata-footer-crop.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/sanghata-footer-crop.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -381,7 +444,7 @@ footer.site-footer {
 }
 
 h2.widget-title {
-  color: var(--saffron);
+  color: var(--link);
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1rem 0 .5rem;
@@ -402,8 +465,8 @@ h2.widget-title {
 .contact-info a,
 .contact-info p,
 .widget_nav_menu ul li a {
-  /* color: var(--link); */
-  color: #fff;
+  color: var(--link);
+  /* color: #fff; */
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.75;
@@ -416,8 +479,7 @@ h2.widget-title {
 .footer-links a:hover,
 .contact-info a:hover,
 .widget_nav_menu ul li a:hover {
-  /* color: var(--hover); */
-  color: #DEE6E3;
+  color: var(--hover);
   text-decoration: underline;
 }
 
@@ -528,6 +590,43 @@ h2.widget-title {
     font-size: 1rem;
   }
 
+  /* Donate */
+
+  .entry .entry-content .donor-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .entry .entry-content .donate-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  img.donate-icon {
+    margin-right: 0;
+  }
+
+  .donate-spacer {
+    height: 2rem !important;
+  }
+
+  /* Archives */
+
+  .hfeed .entry .entry-header {
+    margin: calc(3 * 1rem) calc(10% + 1rem) calc(1rem / 2);
+  }
+
   /* Footer */
   #colophon .widget-area {
     margin: calc(2 * 1rem) calc(10% + 1rem);
@@ -564,7 +663,7 @@ h2.widget-title {
   }
 
   .site-description {
-    font-size: 1.33rem;
+    font-size: 1rem;
   }
 
   .member-picture {
@@ -575,6 +674,20 @@ h2.widget-title {
   .member-info {
     -ms-flex-preferred-size: 65%;
     flex-basis: 65%;
+  }
+
+  .entry .entry-content .donate-link {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  img.donate-icon {
+    margin-right: .75rem;
   }
 }
 
