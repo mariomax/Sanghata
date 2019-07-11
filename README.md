@@ -1,10 +1,7 @@
 # Sanghata
-Sanghata dev site
-
-##
-WordPress Twenty Nineteen theme
-##
-w Custom child theme
+## Sanghata dev site
+## WordPress Twenty Nineteen theme
+## w Custom child theme
 
 ###
 Plugins:
