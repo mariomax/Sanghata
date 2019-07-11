@@ -1,17 +1,15 @@
 # Sanghata
-## Sanghata dev site
-## WordPress Twenty Nineteen theme
-## w Custom child theme
+### Sanghata dev site
+#### WordPress Twenty Nineteen theme
+#### w Custom child theme
 
-###
-Plugins:
+#### Plugins:
 * Wordfence
 * Smush
 * SEOPress
 * Swift Performance Lite
 * Donorbox
 
-###
-Fonts:
+#### Fonts:
 * Google font "Lato" via functions.php
 * "NeutraDisplay-Draft" via child theme fonts folder
