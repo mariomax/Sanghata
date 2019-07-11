@@ -13,3 +13,7 @@
 #### Fonts:
 * Google font "Lato" via functions.php
 * "NeutraDisplay-Draft" via child theme fonts folder
+
+#### Other features:
+* Responsive Header & Footer images
+* Custom icons (cash, check, DonorBox, etc)
