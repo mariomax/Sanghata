@@ -49,6 +49,8 @@ body * {
   font-family: Lato, sans-serif;
 }
 
+/* These need to be specified moreso than body - argh. */
+button,
 blockquote cite,
 table,
 .entry .entry-content .wp-block-button .wp-block-button__link,
@@ -70,8 +72,6 @@ table,
 .entry .entry-content .wp-block-file,
 .entry .entry-content .wp-block-file .wp-block-file__button,
 .entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
-.wp-caption-text,
-.gallery-caption,
 .comment-navigation .nav-previous,
 .comment-navigation .nav-next,
 .comment-list .pingback .comment-body,
@@ -80,6 +80,8 @@ table,
 .comment-list .trackback .comment-body .comment-edit-link,
 .comment-form .comment-notes,
 .comment-form label,
+.gallery-caption,
+.wp-caption-text,
 .widget_archive ul li,
 .widget_categories ul li,
 .widget_meta ul li,
@@ -219,6 +221,10 @@ a {
   background-color: var(--link);
 }
 
+.main-navigation .sub-menu>li>.menu-item-link-return {
+  font-family: Lato, sans-serif;
+}
+
 /* Site branding & Hero */
 
 .site-branding-container {
@@ -256,6 +262,23 @@ textarea:focus {
 }
 
 /* Pages */
+/*  
+  Page ids
+  Home post-10
+  About post-14 
+  Finances post-21
+  Support post-25 
+*/
+
+#post-10 h1.entry-title,
+#post-14 h1.entry-title,
+#post-21 h1.entry-title,
+#post-25 h1.entry-title {
+  color: var(--link);
+  font-family: "NeutraDisplay-Draft";
+  font-size: 1.5rem;
+  margin: 0;
+}
 
 .entry .entry-title:before {
   display: none;
@@ -461,9 +484,10 @@ h1.blog-title::before {
   background: #fff;
 }
 
-h1.blog-title {
+h1.blog-page-title {
   color: var(--link);
-  font-size: 1.75rem;
+  font-family: "NeutraDisplay-Draft";
+  font-size: 1.5rem;
   margin: 0;
 }
 
@@ -471,7 +495,7 @@ h1.blog-title {
 
 h1.entry-title {
   font-family: Lato, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 h2.entry-title a {
@@ -496,12 +520,12 @@ h2.comments-title {
   color: var(--hover);
 }
 
-*:before {
+/* *:before {
   background: #fff;
   content: "" !important;
   height: 0px;
   width: 0px;
-}
+} */
 
 h1:not(.site-title):before,
 h2:before {
@@ -806,7 +830,7 @@ h2.widget-title {
 }
 
 @media only screen and (min-width: 1440px) {
-  
+
   .site-header {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-header-3x1.jpg);
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-header-3x1.jpg);
