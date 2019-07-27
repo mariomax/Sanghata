@@ -144,6 +144,14 @@ a:active {
   font-size: 1.1rem;
 }
 
+.entry-content h4 {
+  color: var(--blue);
+}
+
+.entry-content li {
+  color: var(--blue);
+}
+
 blockquote {
   border-left: 2px solid var(--link);
 }
@@ -736,6 +744,10 @@ h2.widget-title {
 
   h2.entry-title a {
     font-size: 1.25rem;
+  }
+
+  .entry .entry-content > * {
+    max-width: 100vw;
   }
 
   .post-navigation {
