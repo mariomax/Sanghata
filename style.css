@@ -510,6 +510,10 @@ h2.entry-title a {
   font-size: 1.125rem;
 }
 
+.entry .entry-content .post-img img {
+  border-radius: 3px;
+}
+
 h2.comments-title {
   color: var(--seed);
   font-family: Lato, sans-serif;
