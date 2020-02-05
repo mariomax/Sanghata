@@ -29,16 +29,15 @@ Text Domain: twentynineteen-child
   --hover: #C6842F;
   --saffron: #C6842F;
   --gold: #D3AC5E;
-  --pine: #5D7D73;
+  --pine: #92ACA3;
   --fog: #DEE6E3;
   --cloud: #F1F2F2;
-  --white: #FFF;
   --seed: #33363C;
 }
 
 @font-face {
   font-family: "NeutraDisplay-Draft";
-  src: url(https://sanghata.net/wp-content/themes/twentynineteen-child/fonts/NeutraDisplay-Draft.otf);
+  src: url(https://sanghata.pacifichermitage.org/wp-content/themes/twentynineteen-child/fonts/NeutraDisplay-Draft.otf);
   font-weight: normal;
 }
 
@@ -96,27 +95,18 @@ table,
 
 /* Base colors & Fonts */
 
-
-h1.site-title#p-title {
-  color: var(--white) !important;
+.site-title a {
+  color: var(--link) !important;
   font-size: 2rem;
 }
 
-#h-title a,
-#p-title a {
-  color: var(--white) !important;
-  display: block;
+.site-title a:hover {
+  color: var(--seed);
+}
+
+.site-title a:link {
+  color: var(--link) !important;
   font-family: "NeutraDisplay-Draft";
-  font-size: 2rem;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  text-align: center;
-}
-
-#h-title a:hover,
-#p-title a:hover {
-  color: var(--fog);
 }
 
 p {
@@ -175,12 +165,12 @@ blockquote {
 /*  Header */
 
 .site-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-header-3x4.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),  url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-header-3x4.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-header-3x4.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-header-3x4.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1rem 0 11vh;
+  padding: 1rem 0 25vh;
   margin: 0;
 }
 
@@ -188,47 +178,12 @@ blockquote {
   margin: calc(2 * 1rem) 1rem 1rem;
 }
 
-/* Site branding & Hero */
-
-.site-branding-container {
-  padding: 0 1rem;
-}
-
-.site-branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 .site-description {
-  color: var(--fog);
+  color: var(--saffron);
   display: block;
   font-family: "NeutraDisplay-Draft";
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: 600;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  text-align: center;
-}
-
-.site-logo .custom-logo-link {
-  border-radius: 0;
-  margin: 0 auto;
-  height: auto;
-  width: 150px;
-}
-
-.site-logo .custom-logo-link:hover {
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 
 .site-title:not(:empty)+.site-description:not(:empty):before {
@@ -238,15 +193,6 @@ blockquote {
 
 .site-title:not(:empty)+.site-description:not(:empty):before {
   content: "" !important;
-}
-
-#site-navigation.main-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 /* Navigation */
@@ -262,27 +208,21 @@ a {
 }
 
 .main-navigation .main-menu>li {
-  color: var(--fog);
+  color: var(--link);
 }
 
-.main-navigation .main-menu>li>a,
-.main-navigation .sub-menu>li>a  {
-  color: var(--fog);
-  font-size: 1rem;
+.main-navigation .main-menu>li>a {
+  color: var(--link);
 }
 
 .main-navigation .main-menu>li>a:hover {
-  border-bottom: solid 3px var(--pine);
+  border-bottom: solid 3px var(--hover);
   padding-bottom: 3px;
 }
 
 .main-navigation .main-menu>li>a:hover,
 .main-navigation .main-menu>li>a:hover+svg {
-  color: var(--pine);
-}
-
-.main-navigation .sub-menu>li>.menu-item-link-return:hover {
-  background-color: var(--link);
+  color: var(--hover);
 }
 
 .main-navigation .sub-menu {
@@ -291,55 +231,12 @@ a {
 
 .main-navigation .sub-menu>li>.menu-item-link-return {
   font-family: Lato, sans-serif;
-  text-transform: uppercase;
 }
 
-.main-navigation .sub-menu>li>a:hover {
-  background: var(--saffron);
-}
+/* Site branding & Hero */
 
-/* Sticky Navigation */
-
-.site-branding-container.fixedContainer {
-  padding: 0;
-}
-
-.site-branding.fixedBox {
-  margin: 0;
-}
-
-.site-title.fixedTitle {
-  display: inline-block;
-  padding: 0 20px;
-}
-
-.site-description.fixedDescription {
-  padding: 0 20px;
-}
-
-.fixedNav {
-  background: var(--link);
-  margin-top: 0;
-  position: fixed;
-  padding: 10px 1em;
-  top: 0;
-  /* transition: all 0.5s ease; */
-  -webkit-transition: background .5s, margin-top .5s, position .5s, background-position 0s, padding 0s, width .5s, z-index .5s, top .5s;
-  -webkit-transition: background .5s, margin-top .5s, position .5s, padding 0s, width .5s, z-index .5s, top .5s;
-  transition: background .5s, margin-top .5s, position .5s, padding 0s, width .5s, z-index .5s, top .5s;
-  width: 100%;
-  z-index: 999;
-}
-
-.main-navigation .menu-main,
-.fixedNav .menu-main-menu-container {
-  width: calc(100vw - 5rem);
-}
-
-.fixedNav .menu-main-menu-container ul#menu-main-menu {
-  display: inline-block;
-  height: 29px;
-  overflow: hidden;
+.site-branding-container {
+  padding: 0 1rem;
 }
 
 /* Forms */
@@ -386,31 +283,16 @@ textarea:focus {
 #post-21 h1.entry-title,
 #post-25 h1.entry-title {
   color: var(--link);
-  /* font-family: "NeutraDisplay-Draft"; */
+  font-family: "NeutraDisplay-Draft";
   font-size: 1.5rem;
   margin: 0;
-  text-transform: uppercase;
-}
-
-.entry .entry-title {
-  color: var(--pine);
-  text-transform: uppercase;
 }
 
 .entry .entry-title:before {
   display: none;
 }
 
-.entry .entry-content .has-drop-cap:not(:focus):first-letter {
-  font-family: "NeutraDisplay-Draft";
-}
-
-.entry .post-thumbnail .post-thumbnail-inner img {
-  border-radius: 3px;
-}
-
 .entry .entry-content p {
-  font-size: 16px;
   margin: 16px 0 32px;
 }
 
@@ -418,17 +300,9 @@ textarea:focus {
   max-width: 100%;
 }
 
-.entry .entry-footer {
-  margin: 1rem;
-}
-
 p {
   color: var(--link);
   font-weight: normal;
-}
-
-.entry {
-  margin-top: calc(3 * 1rem);
 }
 
 /* Home */
@@ -615,7 +489,7 @@ header.entry-header {
 }
 
 h1.blog-title::before {
-  background: var(--white);
+  background: #fff;
 }
 
 h1.blog-page-title {
@@ -626,10 +500,6 @@ h1.blog-page-title {
 }
 
 /* Posts */
-
-.single .entry-media {
-  display: none;
-}
 
 h1.entry-title {
   font-family: Lato, sans-serif;
@@ -740,47 +610,7 @@ h2.widget-title {
   margin-top: 0;
 }
 
-/* PHABLET ========================================================================== */
 @media only screen and (min-width: 600px) {
-  #site-navigation.main-navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
-  .site-header {
-    padding: 2rem 0 8vh;
-  }
-
-  .site-description {
-    padding: 0 2em;
-  }
-
-
-  .fixedNav .menu-main-menu-container {
-    max-width: 80vw;
-  }
-
-  .fixedNav .menu-main-menu-container ul#menu-main-menu {
-    display: inline-block;
-    min-height: 29px;
-    overflow: visible;
-  }
-
-  .main-navigation>div {
-    margin: 0 auto;
-  }
-
-  .main-menu-more {
-    line-height: 1px;
-  }
 
   .member-picture {
     -ms-flex-preferred-size: 35%;
@@ -799,7 +629,6 @@ h2.widget-title {
   }
 }
 
-/* TABLET =========================================================================== */
 @media only screen and (min-width: 768px) {
 
   .main-navigation .sub-menu>li>a:hover,
@@ -818,53 +647,15 @@ h2.widget-title {
 
   .site-header {
     display: block;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-header-2.5x1.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-header-2.5x1.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-header-2.5x1.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-header-2.5x1.jpg);
     background-position: center center;
     background-size: cover;
     margin: 0;
   }
 
-  .site-title.fixedTitle,
-  .site-description.fixedDescription {
-    padding: 0 calc(5% + 1rem);
-  }
-
-  .fixedNav {
-    padding: 10px 0;
-  }
-
-  .fixedNav .menu-main-menu-container {
-    width: auto;
-  }
-
-  .site-branding {
-    /* margin: 0 0 0 calc(10% + 1rem); */
-    margin: 0 5%;
-  }
-
-  .site-logo {
-    position: relative;
-    padding-bottom: 1.5rem;
-    right: 0;
-  }
-
-  .site-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    font-size: 3rem;
-    letter-spacing: 0.19em;
-    margin: 0 auto;
-    padding-left: 0.19em;
-  }
-
   .site-description {
     font-size: 1rem;
-    padding: 0;
   }
 
   .entry .entry-header {
@@ -873,6 +664,10 @@ h2.widget-title {
 
   .site-title {
     font-size: 3rem;
+  }
+
+  .site-branding {
+    margin: 0 0 0 calc(10% + 1rem);
   }
 
   .entry .entry-content {
@@ -999,50 +794,9 @@ h2.widget-title {
   }
 }
 
-/* LARGE TABLET =========================================================================== */
 @media only screen and (min-width: 1024px) {
   .site-header {
-    padding: 2rem 0 10vh;
-  }
-
-  /* Home page: blog image/content via CSS Grid */
-  article.post {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "figure header"
-      "figure content"
-      "figure footer";
-  }
-
-  article.entry .post-thumbnail {
-    grid-area: figure;
-    margin: calc(2 * 1.5rem) 0 0 calc(10% + 2rem);
-  }
-
-  .hfeed .entry .entry-header {
-    grid-area: header;
-    margin: calc(2 * 1rem) 5% calc(1rem / 2) 10%;
-  }
-
-  .entry .entry-header {
-    max-width: 80%;
-    margin: calc(3 * 1rem) 10%;
-  }
-
-  .entry .entry-content {
-    grid-area: content;
-    padding: 0;
-  }
-
-  .entry .entry-footer {
-    grid-area: footer;
-    margin: 1rem 5% calc(2 * 1rem) 10%;
-  }
-
-  .entry:first-of-type {
-    margin-top: 1rem;
+    padding: 1rem 0 30vh;
   }
 
   .member-picture {
@@ -1070,88 +824,10 @@ h2.widget-title {
   }
 }
 
-/* WP_2019 ========================================================================== */
 @media only screen and (min-width: 1168px) {
 
   .entry .entry-content>* {
     max-width: 100%;
-  }
-
-  .page .entry .entry-header {
-    margin: calc(3 * 1rem) 15%;
-  }
-
-  .page .entry .entry-content {
-    margin: 0 15%;
-  }
-
-  /* Large header: site logo moves to left side (inline) */
-  .site-branding {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas:
-      "logo title"
-      "logo description"
-      "logo navigation";
-    margin: 2rem 0;
-  }
-
-  .site-logo {
-    grid-area: logo;
-    padding-bottom: 0;
-  }
-
-  .site-logo .custom-logo-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    margin: 0 0 0 auto;
-  }
-
-  .site-title {
-    grid-area: title;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: start;
-    margin: 0 auto;
-    padding: 2.25rem 0 0;
-  }
-
-  .site-description {
-    grid-area: description;
-    margin: 0 auto;
-  }
-
-  .main-navigation {
-    grid-area: navigation;
-    padding: 0;
-  }
-
-  .main-navigation .main-menu>li.menu-item-has-children {
-    padding: 0 .5em;
-  }
-
-  .main-navigation ul.main-menu>li {
-    padding: 0 .5em;
-  }
-
-  .site-logo .custom-logo-link {
-    height: 200px !important;
-    width: 200px;
-  }
-
-  .site-logo .custom-logo-link img {
-    height: 200px !important;
-    width: 200px;
-  }
-
-  .fixedNav {
-    padding: 15px 0;
   }
 
   .member-block {
@@ -1169,28 +845,11 @@ h2.widget-title {
   }
 }
 
-/* LAPTOP =========================================================================== */
 @media only screen and (min-width: 1440px) {
 
   .site-header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-header-3x1.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-header-3x1.jpg);
-  }
-
-  .site-branding {
-    grid-template-columns: 1fr 2.5fr 1fr;
-  }
-
-  .site-logo {
-    padding-right: 2em;
-  }
-
-  .page .entry .entry-header {
-    margin: calc(3 * 1rem) 20%;
-  }
-
-  .page .entry .entry-content {
-    margin: 0 20%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-header-3x1.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-header-3x1.jpg);
   }
 
   footer.site-footer {
