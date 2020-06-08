@@ -26,8 +26,10 @@ Text Domain: twentynineteen-child
 :root {
   --link: #303E5C;
   --blue: #305271;
-  --hover: #C6842F;
-  --saffron: #C6842F;
+  --hover: #9D6925;
+  --saffron: #9D6925;
+  /* --hover: #C6842F;
+  --saffron: #C6842F; */
   --gold: #D3AC5E;
   --pine: #5D7D73;
   --fog: #DEE6E3;
@@ -218,6 +220,7 @@ a {
 .main-navigation .sub-menu>li>a {
   color: var(--fog);
   font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .main-navigation .main-menu>li>a:hover {
@@ -384,6 +387,10 @@ p {
   margin-top: calc(3 * 1rem);
 }
 
+article ul li {
+  font-size: 16px;
+}
+
 /* Home */
 
 .cta-box-left {
@@ -392,6 +399,11 @@ p {
 
 .cta-box-right {
   flex-basis: 50%;
+}
+
+h2.callout {
+  color: var(--saffron);
+  font-size: 1.25rem;
 }
 
 h3.callout {
@@ -407,6 +419,7 @@ h3.callout {
 .entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
   background-color: var(--saffron);
   box-shadow: 7px 7px 5px var(--fog);
+  font-size: 1.25rem;
 }
 
 .entry .entry-content .wp-block-button .wp-block-button__link:hover {
@@ -626,8 +639,10 @@ h2:before {
 /* Footer */
 
 footer.site-footer {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-footer-4x5.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-footer-4x5.jpg);
+  /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-footer-4x5.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-footer-4x5.jpg); */
+  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-footer-4x5.jpg);
+  background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-footer-4x5.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -639,7 +654,7 @@ footer.site-footer {
 }
 
 h2.widget-title {
-  color: var(--link);
+  color: var(--cloud);
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1rem 0 .5rem;
@@ -654,9 +669,15 @@ h2.widget-title {
   flex-direction: column;
 }
 
-.footer-links a,
 .contact-info a,
 .contact-info p,
+.footer-links a {
+  color: var(--cloud);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
 .widget_nav_menu ul li a {
   color: var(--link);
   font-size: 1.125rem;
@@ -669,7 +690,11 @@ h2.widget-title {
 }
 
 .footer-links a:hover,
-.contact-info a:hover,
+.contact-info a:hover {
+  color: var(--fog);
+  text-decoration: underline;
+}
+
 .widget_nav_menu ul li a:hover {
   color: var(--hover);
   text-decoration: underline;
@@ -836,6 +861,10 @@ h2.widget-title {
     flex-basis: 30%;
   }
 
+  h2.callout {
+    font-size: 1.25rem;
+  }
+
   h3.callout {
     font-size: 1.1rem;
   }
@@ -915,8 +944,10 @@ h2.widget-title {
   }
 
   footer.site-footer {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-footer-3x1.jpg);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-footer-3x1.jpg);
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-footer-3x1.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-footer-3x1.jpg); */
+    background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-footer-3x1.jpg);
+    background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-footer-3x1.jpg);
   }
 
   h2.widget-title {
@@ -1000,6 +1031,11 @@ h2.widget-title {
 
 /* WP_2019 ========================================================================== */
 @media only screen and (min-width: 1168px) {
+
+  article {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
 
   .entry .entry-content>* {
     max-width: 100%;
@@ -1116,7 +1152,9 @@ h2.widget-title {
   }
 
   footer.site-footer {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-footer-4.5x1.jpg);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-footer-4.5x1.jpg);
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-footer-4.5x1.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-footer-4.5x1.jpg); */
+    background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-footer-4.5x1.jpg);
+    background-image: url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-footer-4.5x1.jpg);
   }
 }
